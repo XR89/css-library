@@ -1,0 +1,52 @@
+POSITIONS
+
+relative: relative to itself, and moves around the original position it was set at.
+absolute: relative to it's parent ( if its parent does not have a position it is relative to the body)
+static: keeps it original position and does NOT move.
+fixed: relative to the inital containing block of the document (top ususally)
+sticky: not fixed then fixed later
+
+------------------------------------------------------------------------------------------------------------------------
+
+NTH OF CHILD
+
+- :nth-child(2) only the second
+- :nth-child(2n) every second
+- :nth-of-type
+- :first-of-type
+
+------------------------------------------------------------------------------------------------------------------------
+
+TRANSITION
+best practice: - single out the properties ( makes it easier down the line )
+
+property name | duration | timing function | delay
+e.g:
+transition: background-colour 3s 1s;
+transition: all 3s 1s;
+transition: background-colour 3s 1s, border-radius 2s 3s
+
+timing function:
+ease-in, linear etc
+
+e.g
+transition: background-colour 3s ease-in 1s
+
+transition-timing-function: ease-in;
+(use this if you want to set the individual timing fucntions of say a div/nth of child of a div etc )
+
+------------------------------------------------------------------------------------------------------------------------
+
+TRANSFORM
+Note: applies to all elements inside the element you are targetting
+
+e.g
+transform: rotate(45deg);
+transform-origin: top right;
+transform: rotateX/Y(); (sometimes useful for examples cards that show another side)
+transform: scale(x, y) --- uses 0.1, 1.5 etc
+transform: translateX(x, y)  --- can use any measurement, px, rem, em etc
+transform: skew(x, y) -- uses gradients, deg etc
+
+chain:
+transform: skew(x, y) scale(1.4)
