@@ -24,7 +24,7 @@ property name | duration | timing function | delay
 e.g:
 transition: background-colour 3s 1s;
 transition: all 3s 1s;
-transition: background-colour 3s 1s, border-radius 2s 3s
+transition: background-colour 3s 1s, border-radius 2s 3s  --- needs to be listed out (cant just add the names one after the other)
 
 timing function:
 ease-in, linear etc
@@ -50,3 +50,119 @@ transform: skew(x, y) -- uses gradients, deg etc
 
 chain:
 transform: skew(x, y) scale(1.4)
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+BACKGROUND
+
+background-image: url(url);
+background-size: cover;  --- (contain)
+background-position: bottom; --- (top etc, aligns the image with the top bottom right left etc)
+no repeat
+background-colour: ; (use this to be very specific)
+background:      --- (shorthand, but if you want to use cover/contain it has to be right after the position seperated by a /)
+     e.g background: center/cover;
+
+------------------------------------------------------------------------------------------------------------------------
+
+JUSTIFY CONTENT
+
+justify-content: ;
+aligns items along the main axis
+switch side with flex-end
+
+--------------
+
+WRAPPING FLEXBOX
+
+flex-wrap: ;
+flex-wrap: wrap-reverse; --- this changes the cross (top to bottom) axis direction (from top to bottom to bottom to top)
+
+--------------
+
+ALIGN ITMES
+
+align-items: ;
+aligns the items along the cross axis (centering the items vertiacally)
+
+flex-start (top)
+flex-end (bottom)
+baseline --- align items along the baseline of the text in the box
+
+--------------
+
+ALIGN CONTENT
+controls the space between the items(either row or column) but ONLY when we have flex wrap/reverse
+
+align-content: ;
+
+--------------
+
+ALIGN SELF
+
+appied to individual elements, allows you to move out a single item along the cross axis
+
+--------------
+
+FLEX BASIS
+defines the intial size of an element before additional space is distributed.
+
+flex-basis: 200px;
+
+--------------
+
+FLEX GROW
+Controls the amount of avilable space an element should take up. Accepts a unit-less value
+
+flex-grow: 1; = fills all avilable space
+
+set a min/max height and width in order to stop the grow at a certain point.
+E.g max width 300px grow 1 will = grow until 300px then stop, 2 = 600px
+
+-------------
+
+FLEX SHRINK
+tell it how much to shrink by RELATIVE to other elements
+
+flex-shrink: 2; = shrinks twice as fast as other elements ( all els maybe 200px width and this would be 100 px)
+0 = NO SHRINK
+
+default is 1
+
+-----------
+
+FLEX
+shorthand
+
+One value, width/height: flex-basis
+flex: 10em;
+flex: 30%;
+flex: min-content;
+
+Two values: flex-grow | flex-basis
+flex: 1 30px;
+
+Two values: flex-grow | flex-shrink
+flex: 2 2;
+
+Three values: flex-grow | flex-shrink | flex-basis
+flex: 2 2 10%;
+
+------------
+
+CHEAT SHEET
+
+column
+justify content = moves boxes top to bottom
+align items = left to right
+
+row
+justify content = left to right
+align items = moves boxes top to bottom
+
+------------------------------------------------------------------------------------------------------------------------
+
+REPONSIVE DESIGN (MEDIA QUERIES)
+
+@media

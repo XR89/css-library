@@ -130,6 +130,8 @@ Remeber ems takes the size of its parents and will get bigger each time rems tak
   padding: 1em 2em;
   font-size: 1em;
   transition: all 0.25s ;
+  /* note the transition all here relates to all the attributes below, border-color, color, box-shadow, transform */
+  cursor: pointer;
 }
 
 .btn-tron-rectangle-yellow:hover{
