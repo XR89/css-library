@@ -165,4 +165,7 @@ align items = moves boxes top to bottom
 
 REPONSIVE DESIGN (MEDIA QUERIES)
 
-@media
+@media (min-width: XXXpx) {
+}
+@media (orientation: landscape){
+}
